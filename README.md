@@ -2,7 +2,7 @@
 
 My personal portfolio website, built with **React**. It showcases my projects, skills, qualifications and certifications, and has a working contact form.
 
-**▶ Live site: [aj-react-portfolio-udfz.vercel.app](https://aj-react-portfolio-udfz.vercel.app/)**
+**▶ Live site: [saravanan-22.github.io/react-portfolio](https://saravanan-22.github.io/react-portfolio/)**
 
 ![Portfolio home page](screenshots/home.png)
 
