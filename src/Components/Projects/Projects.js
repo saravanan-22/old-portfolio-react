@@ -149,7 +149,7 @@ const Projects = () => {
               </Button>
             </Link>
             <Link
-              to={"https://github.com/saravanan-22/AJ_REACT_MERN_P3_QUIZAPP"}
+              to={"https://github.com/saravanan-22/mern-quiz-app"}
               target="_blank"
             >
               <Button variant="outline-warning">CODE</Button>
@@ -340,7 +340,7 @@ const Projects = () => {
               </Button>
             </Link>
             <Link
-              to={"https://github.com/saravanan-22/AJ_REACT_P1-OQDP"}
+              to={"https://github.com/saravanan-22/open-question-database"}
               target="_blank"
             >
               <Button variant="outline-warning">CODE</Button>
@@ -476,7 +476,7 @@ const Projects = () => {
               </Button>
             </Link>
             <Link
-              to={"https://github.com/saravanan-22/AJ_REACT_P2_MOVIEAPP"}
+              to={"https://github.com/saravanan-22/movie-app-react"}
               target="_blank"
             >
               <Button variant="outline-warning">CODE</Button>
@@ -554,7 +554,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_12_RWI"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/repeated-words-identifier"
                       }
                       target="blank"
                     >
@@ -577,7 +577,7 @@ const Projects = () => {
                     style={{ display: "flex", justifyContent: "space-evenly" }}
                   >
                     <Link
-                      to={"https://github.com/saravanan-22/AJ_JS_FCCP-15_14_NA"}
+                      to={"https://github.com/saravanan-22/javascript-mini-projects/tree/main/notes-app"}
                       target="blank"
                     >
                       <Button variant="outline-dark">DEMO</Button>
@@ -585,7 +585,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_12_RWI"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/repeated-words-identifier"
                       }
                       target="blank"
                     >
@@ -618,7 +618,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_9_GTNG"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/guess-the-number"
                       }
                       target="blank"
                     >
@@ -650,7 +650,7 @@ const Projects = () => {
                     </Link>
 
                     <Link
-                      to={"https://github.com/saravanan-22/AJ_JS_FCCP-15_1_CF"}
+                      to={"https://github.com/saravanan-22/javascript-mini-projects/tree/main/color-flipper"}
                       target="blank"
                     >
                       {" "}
@@ -680,7 +680,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_2_COUNTER"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/counter"
                       }
                       target="blank"
                     >
@@ -713,7 +713,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_6_CALCULATOR"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/calculator"
                       }
                       target="blank"
                     >
@@ -746,7 +746,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_4_TO-DO-LIST"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/todo-list"
                       }
                       target="blank"
                     >
@@ -779,7 +779,7 @@ const Projects = () => {
 
                     <Link
                       to={
-                        "https://github.com/saravanan-22/AJ_JS_FCCP-15_11_RLC"
+                        "https://github.com/saravanan-22/javascript-mini-projects/tree/main/repeated-letters-checker"
                       }
                       target="blank"
                     >
