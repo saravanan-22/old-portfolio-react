@@ -4,6 +4,8 @@ My personal portfolio website, built with **React**. It showcases my projects, s
 
 **▶ Live site: [aj-react-portfolio-udfz.vercel.app](https://aj-react-portfolio-udfz.vercel.app/)**
 
+![Portfolio home page](screenshots/home.png)
+
 ## Sections
 - 🏠 Home with animated welcome
 - 🙋 About me
@@ -22,3 +24,6 @@ cd react-portfolio
 npm install
 npm start
 ```
+
+## License
+[MIT](LICENSE) © Saravanan
