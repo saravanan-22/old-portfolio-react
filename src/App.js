@@ -14,7 +14,7 @@ import Home from "./Components/Home/Home"
 
 function App() {
   return <div className="App">
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Welcome/>}/>
         <Route path="/Home" element={<Home/>} />

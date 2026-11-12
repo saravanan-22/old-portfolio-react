@@ -3,7 +3,7 @@ import "./aboutMe.css";
 import Button from "react-bootstrap/esm/Button";
 import { FaFileArrowDown } from "react-icons/fa6";
 import image from "../../images/photo.png";
-import resume from "../../resume/resume_saravanan.pdf"
+import resume from "../../resume/resume_saravanan3-11.pdf"
 
 function AboutMe() {
   return (
