@@ -1,13 +1,129 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "tailwindcss";
+
+@theme {
+  /* Jewel-tone palette: plum-black base, warm ivory text, gold/rose/violet accents. */
+  --color-ink: #0b0614;
+  --color-surface: #150d24;
+  --color-surface-2: #1f1433;
+  --color-line: #33264d;
+  --color-fg: #f5efe6;
+  --color-muted: #b3a9c9;
+  --color-accent: #f4c26b;
+  --color-accent-2: #b794f6;
+  --color-accent-3: #ff7eb6;
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --animate-marquee: marquee 60s linear infinite;
+  --animate-float: float 14s ease-in-out infinite;
+  --animate-spin-slow: spin 40s linear infinite;
+  --animate-shine: shine 6s linear infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    33% {
+      transform: translate3d(4%, -6%, 0) scale(1.08);
+    }
+    66% {
+      transform: translate3d(-5%, 4%, 0) scale(0.95);
+    }
+  }
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-ink font-sans text-fg antialiased;
+    /* Slide-in-from-side reveals start off-canvas; clip (not hidden) keeps scroll APIs intact. */
+    overflow-x: clip;
+  }
+  /* Rich backdrop: soft aurora glows plus fine film grain, fixed behind all content. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+      radial-gradient(
+        70rem 50rem at 100% -10%,
+        color-mix(in oklab, var(--color-accent-2) 16%, transparent),
+        transparent 65%
+      ),
+      radial-gradient(
+        60rem 45rem at -15% 35%,
+        color-mix(in oklab, var(--color-accent-3) 9%, transparent),
+        transparent 65%
+      ),
+      radial-gradient(
+        55rem 40rem at 80% 110%,
+        color-mix(in oklab, var(--color-accent) 8%, transparent),
+        transparent 65%
+      ),
+      var(--color-ink);
+  }
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+/* Animated gradient text used for headline accents. */
+@utility text-gradient {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-accent),
+    var(--color-accent-3),
+    var(--color-accent-2),
+    var(--color-accent)
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtle dotted grid used behind the hero. */
+@utility bg-grid {
+  background-image: radial-gradient(
+    color-mix(in oklab, var(--color-muted) 35%, transparent) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
